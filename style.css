@@ -1,0 +1,367 @@
+@import url('htttps:/ font.googleapis.com/css2? family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+*{
+    margin :0;
+    padding :0;
+    box-sizing: border-box;
+    font-family:'Poppins',sans-serif;
+}
+body{
+    background: #0c1022;
+    color: #fff;
+
+}
+  .header 
+  { position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+
+  }
+
+  .logo{
+    font-size: 25px;
+    color: #fff;
+    text-decoration: solid;
+    font-weight: 600;
+    pointer-events: none;
+
+
+  }
+  .navbar a{
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    font font-weight: 500;
+    margin-left: 35px;
+
+  }
+  .navbar a.active,
+  .navbar a:hover
+  {
+    background: linear-gradient(45deg,#f06,#3cf);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+
+  }
+  .home{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10%;
+  }
+  .home-content{
+    
+    max-width: 500px;
+  }
+  .home-content h1{
+    font-size: 56px;
+    font-weight: 700;
+
+  }
+  .home-content h3{
+    font-size: 26px;
+    font-weight: 600;
+  }
+  .btn{
+    position: relative;
+    width: 180px;
+    height: 48px;
+    border-radius: 40px;
+    background-color: ;
+    font-size: 25px;
+    color:black;
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: 1px;
+ }
+ .btn::after {
+    content: '';
+    position: absolute;
+    
+    top:0;
+    left:0;
+    inset: 0;
+    background: linear-gradient(45deg,#f06,#3cf,#f06);
+    z-index: -1;
+    border-radius: 40px;
+    background-size: 200%;
+    transition: .5s ease;
+    filter: blur(5px);
+ }
+ .btn:hover::after{
+    background-position: 0 100%;
+ }
+.home-sci a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(45deg,#f06,#3cf,#f06);
+    border-radius: 50%;
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.562);
+    margin: 2px;
+
+
+
+}
+.home-sci:hover::before{
+    filter: blur(5px);
+    
+ }
+ .home-img .glowing-circle {
+    width: 250px; /* Set the size of the circle */
+    height: 250px; /* Set the size of the circle */
+    background-color: #f06; /* Circle color */
+    border-radius: 50%; /* Makes the element circular */
+    position: relative;
+    box-shadow: 0 0 20px 5px #f06, 0 0 50px 15px #3cf; /* Glowing effect */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .home-img .glowing-circle img {
+    width: 250px; /* Size of the profile picture */
+    height: 250px; /* Size of the profile picture */
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover; /* Ensures the image fits nicely inside */
+    border: 2px solid black; /* Optional border for the image */
+  }
+  /* About Page Styling */
+.about-section {
+    width: 100%;
+    min-height: 100vh;
+    background: #0c1022; /* Matches the background color of index page */
+    color: #fff;
+    padding: 80px 10%; /* Padding to ensure elements aren't cramped */
+    text-align: center;
+  }
+  
+  .about-section h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    background: linear-gradient(45deg, #f06, #3cf);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .about-section p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    max-width: 800px;
+    margin: 0 auto; /* Centers the paragraph */
+    color: rgba(255, 255, 255, 0.8);
+  }
+  
+  .about-section .profile-container {
+    margin: 40px auto;
+    position: relative;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 0 20px 5px #f06, 0 0 50px 15px #3cf;
+  }
+  
+  .about-section .profile-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 3px solid black;
+  }
+  
+  /* Skills Section Inside About Page */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    margin-top: 50px;
+  }
+  
+  .skills-grid .skill-box {
+    background: linear-gradient(45deg, #f06, #3cf);
+    color: #0c1022;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.3s ease;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .skills-grid .skill-box:hover {
+    transform: scale(1.05);
+    background: linear-gradient(45deg, #3cf, #f06);
+  }
+/* Skills Page Styling */
+.skills-section {
+    width: 100%;
+    min-height: 100vh;
+    background: #0c1022; /* Matches the overall theme */
+    color: #fff;
+    padding: 80px 10%;
+    text-align: center;
+  }
+  
+  .skills-section h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    background: linear-gradient(45deg, #f06, #3cf);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .skills-section p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 50px;
+    max-width: 800px;
+    margin: 0 auto; /* Centers the text */
+    color: rgba(255, 255, 255, 0.8);
+  }
+  
+  /* Skills Grid */
+  .skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+    padding: 0 10%;
+  }
+  
+  .skill-card {
+    background: linear-gradient(45deg, #f06, #3cf);
+    color: #0c1022;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    transition: 0.3s ease;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .skill-card:hover {
+    transform: scale(1.1);
+    background: linear-gradient(45deg, #3cf, #f06);
+    color: #fff;
+  }
+  
+  /* Animation for Skill Cards */
+  .skill-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 15px;
+    background: linear-gradient(45deg, rgba(240, 96, 96, 0.3), rgba(60, 240, 240, 0.3));
+    z-index: -1;
+    filter: blur(10px);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .skill-card:hover::before {
+    opacity: 1;
+  }
+/* Contact Me Page Styling */
+.contact-section {
+    width: 100%;
+    min-height: 100vh;
+    background: #0c1022; /* Matches overall theme */
+    color: #fff;
+    padding: 80px 10%;
+    text-align: center;
+  }
+  
+  .contact-section h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    background: linear-gradient(45deg, #f06, #3cf);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .contact-section p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 50px;
+    max-width: 800px;
+    margin: 0 auto;
+    color: rgba(255, 255, 255, 0.8);
+  }
+  
+  /* Contact Form Styling */
+  .contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .contact-form .form-group {
+    position: relative;
+    width: 100%;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 15px 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 16px;
+    outline: none;
+    resize: none;
+    transition: 0.3s ease;
+  }
+  
+  .contact-form input::placeholder,
+  .contact-form textarea::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+  }
+  
+  .contact-form input:focus,
+  .contact-form textarea:focus {
+    background: rgba(255, 255, 255, 0.2);
+  }
+  
+  .contact-form button.btn {
+    width: 100%;
+    height: 50px;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 8px;
+    background: linear-gradient(45deg, #f06, #3cf);
+    color: #0c1022;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  
+  .contact-form button.btn:hover {
+    background: linear-gradient(45deg, #3cf, #f06);
+    color: #fff;
+  }
+      
+/* General Styling */
